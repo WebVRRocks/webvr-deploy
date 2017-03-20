@@ -1,0 +1,14 @@
+*.*log
+.*_packages
+.DS_Store
+._*
+.cache
+.env
+.sw*
+_build
+_prod
+ecosystem.json
+log.txt*
+node_modules/
+pouch__*
+tmp/
