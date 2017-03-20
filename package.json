@@ -9,12 +9,12 @@
     "cross-env": "^3.2.4",
     "dotenv": "^4.0.0",
     "hapi": "^16.1.0",
-    "hapi-github-webhooks": "^1.0.3"
+    "hapi-github-webhooks": "^1.0.3",
+    "shx": "^0.2.2"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
     "semistandard": "^9.2.1",
-    "shx": "^0.2.2",
     "snazzy": "^6.0.0"
   },
   "scripts": {
