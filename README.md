@@ -32,11 +32,11 @@ Run these commands locally to set up on the server the process manager, [`pm2`](
 export WEBVR_DEPLOY_USER="nodeuser"
 export WEBVR_DEPLOY_IP="138.197.120.12"
 
-ssh $WEBVR_DEPLOY_USER@$WEBVR_DEPLOY_IP "npm install pm2 -g && mkdir -p /var/www/node/webvrrocks && git clone git@github.com:webvrrocks/webvr-deploy.git /var/www/node/webvrrocks/webvr-deploy"
+ssh $WEBVR_DEPLOY_USER@$WEBVR_DEPLOY_IP "npm install pm2 -g && mkdir -p /var/www/node/webvrrocks && git clone git@github.com:webvrrocks/webvr-deploy.git /var/www/node/webvrrocks/webvr-deploy && pushd /var/www/node/webvrrocks/webvr-deploy && npm install --production && popd"
 echo 'WEBVR_DEPLOY_SECRET_WEBVR_AGENT="SECRET_GOES_HERE"' > .env
 scp .env $WEBVR_DEPLOY_USER@$WEBVR_DEPLOY_IP:/var/www/node/webvrrocks/webvr-deploy/.env
 scp pm2-ecosystem.json $WEBVR_DEPLOY_USER@$WEBVR_DEPLOY_IP:/var/www/node/webvrrocks/webvr-deploy/pm2-ecosystem.json
-ssh $WEBVR_DEPLOY_USER@$WEBVR_DEPLOY_IP "pm2 startup && pm2 startOrGracefulReload /var/www/node/webvrrocks/webvr-deploy/pm2-ecosystem.json"
+ssh $WEBVR_DEPLOY_USER@$WEBVR_DEPLOY_IP "pm2 update && pm2 startup && pm2 startOrGracefulReload /var/www/node/webvrrocks/webvr-deploy/pm2-ecosystem.json"
 ```
 
 
