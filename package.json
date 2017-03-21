@@ -2,7 +2,7 @@
   "name": "webvr-deploy",
   "description": "Tools for managing server deployment of WebVR services.",
   "version": "1.0.0",
-  "license": "CC0 1.0 Universal",
+  "license": "Creative Commons Zero v1.0 Universal",
   "main": "./server.js",
   "repository": "https://github.com/webvrrocks/webvr-deploy",
   "dependencies": {
