@@ -9,7 +9,7 @@ git pull
 git submodule init
 git submodule update --remote
 
-npm install --production
+sudo npm install --production
 
 pm2 restart webvr-agent
 
