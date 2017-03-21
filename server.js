@@ -2,8 +2,11 @@
 /* eslint-env es6 */
 
 const execFile = require('child_process').execFile;
+const path = require('path');
 
-require('dotenv').config();
+require('dotenv').config({
+  path: path.join(__dirname, '.env')
+});
 
 const hapi = require('hapi');
 const githubWebhooksPlugin = require('hapi-github-webhooks');
